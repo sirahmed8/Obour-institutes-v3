@@ -4,9 +4,13 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { Sidebar, Navbar } from './components/ui/Layout';
 import { Home } from './pages/Home';
 import { Admin } from './pages/Admin';
+import { SubjectView } from './pages/SubjectView';
 import { AIStudio } from './pages/AIStudio';
+import { NotificationsPage } from './pages/NotificationsPage';
+import { Team } from './pages/Team';
 import { AIChatbot } from './components/features/AIChatbot';
 import { Loader2 } from 'lucide-react';
+import { Toaster } from 'sonner';
 
 const ProtectedRoute = ({ adminOnly = false }: { adminOnly?: boolean }) => {
   const { user, loading } = useAuth();
@@ -80,8 +84,9 @@ export default function App() {
           <Route element={<ProtectedRoute />}>
              <Route element={<AppLayout />}>
                <Route path="/" element={<Home />} />
-               <Route path="/subject/:id" element={<div className="p-10 text-center font-bold text-gray-400">صفحة المادة (قيد التطوير)</div>} />
-               <Route path="/notifications" element={<div className="p-10 text-center font-bold text-gray-400">لا توجد إشعارات جديدة</div>} />
+               <Route path="/subject/:id" element={<SubjectView />} />
+               <Route path="/notifications" element={<NotificationsPage />} />
+               <Route path="/team" element={<Team />} />
              </Route>
           </Route>
 
@@ -95,6 +100,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </HashRouter>
+      <Toaster position="top-center" richColors />
     </AuthProvider>
   );
 }

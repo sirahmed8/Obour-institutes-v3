@@ -57,9 +57,10 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const login = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Login failed:", error);
-      alert("فشل تسجيل الدخول. يرجى المحاولة مرة أخرى.");
+      const errorMessage = error?.message || "Unknown error";
+      alert(`فشل تسجيل الدخول: ${errorMessage}`);
     }
   };
 

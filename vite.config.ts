@@ -20,14 +20,10 @@ export default defineConfig(({ mode }) => {
         }
       },
       build: {
-        chunkSizeWarningLimit: 1000,
+        chunkSizeWarningLimit: 3000,
         rollupOptions: {
           output: {
-            manualChunks: {
-              vendor: ['react', 'react-dom', 'react-router-dom'],
-              firebase: ['firebase/app', 'firebase/auth', 'firebase/firestore', 'firebase/database', 'firebase/storage', 'firebase/analytics'],
-              ui: ['lucide-react', 'recharts', 'framer-motion']
-            }
+            // manualChunks removed to prevent potential rollup crashes
           }
         }
       }
