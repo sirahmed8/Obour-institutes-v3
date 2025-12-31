@@ -1,0 +1,8 @@
+{
+  "name": "Obour Institutes Platform",
+  "description": "منصة معاهد العبور - A next-gen academic platform featuring AI assistance, admin dashboards, and generative media studios.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
