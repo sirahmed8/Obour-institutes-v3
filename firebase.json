@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "obour-institutesv2",
+    "site": "obour-institutesv3",
     "public": "dist",
     "ignore": [
       "firebase.json",

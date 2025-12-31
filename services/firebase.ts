@@ -16,8 +16,8 @@ const firebaseConfig = {
   projectId: "obour-institutes-a607d",
   storageBucket: "obour-institutes-a607d.firebasestorage.app",
   messagingSenderId: "761134603194",
-  appId: "1:761134603194:web:786ca2066f75fae2935b83",
-  measurementId: "G-SZYYE5T7P1"
+  appId: "1:761134603194:web:a434d916518caa86935b83",
+  measurementId: "G-6KWJB42P4N"
 };
 
 // Initialize Firebase
